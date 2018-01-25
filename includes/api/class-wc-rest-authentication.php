@@ -350,7 +350,7 @@ class WC_REST_Authentication {
 		}
 
 		// Sort parameters.
-		if ( ! usort( $query_parameters, 'strcmp' ) ) {
+		if ( ! uksort( $query_parameters, 'strcmp' ) ) {
 			return new WP_Error( 'woocommerce_rest_authentication_error', __( 'Invalid signature - failed to sort parameters.', 'woocommerce' ), array( 'status' => 401 ) );
 		}
 
